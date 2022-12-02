@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5" style="color:rgb(0, 0, 0)"> Resultados de la busquedas </h1>
+
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'buscar' %}" method="GET">
+
+    {% for areas in Area %}
+        <li> {{ areas.nombre }} </li>
+        <li> {{ areas.numero }} </li>
+        <br>
+    {% endfor %}
+    
+
+
+
+
+</form>
+
+
+
+{% endblock %}

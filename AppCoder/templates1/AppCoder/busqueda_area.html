@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5" style="color:rgb(0, 0, 0)"> Busqueda de Areas </h1>
+
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'buscar' %}" method="GET">
+
+<input type="number" name="area" id="area">
+
+
+<input type="submit" value="buscar">
+
+
+
+
+</form>
+
+
+
+{% endblock %}
